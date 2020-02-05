@@ -1,0 +1,31 @@
+{{#partial "content"}}
+    <div class="section">
+        <div class="form-left">
+            <h2>F1 Racing Teams</h2>
+            <div class="icon">
+                <img  src="/images/team.jpg" alt="image">
+            </div>
+        </div>
+        <div class="form-right">
+            <h3>Add a new F1 Racing Team</h3>
+            <form action="/teams/new" method="post" name="teamForm" class="form">
+                <input class="form-control input" type="text" placeholder="Enter the Team Name..." name="teamName" autocomplete="off">
+                <input class="form-control input" type="number" placeholder="Enter the Team Max Size..." name="maxsize" />
+                <select class="form-control input" name="advantage">
+                    <option label="" hidden disabled selected value>Choose top feature..</option>
+                    <option value="Aerodynamics">Aerodynamics</option>
+                    <option value="Engine Power">Engine Power</option>
+                    <option value="Electric Engine">Electric Engine</option>
+                    <option value="Ground Effect">Ground Effect</option>
+                    <option value="Chasis Design">Chasis Design</option>
+                    <option value="Acceleration">Acceleration</option>
+                    <option value="Tyres">Tyres</option>
+                    <option value="Transmission">Transmission</option>
+                </select>
+                <button type="submit" class="button">Add</button>
+            </form>
+         </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

@@ -1,0 +1,31 @@
+{{#partial "content"}}
+    <div class="pages">
+        <h2 class="text-center">F1 Racing Teams</h2>
+{{#if teams}}
+    <div class="row ">
+{{#each teams }}
+    <div class="card col-md-3">
+        <div class="teams-col">
+            <h3 class="teamsname text-center">F1 Team</h3>
+            <div class="img">
+                <img src="/images/cars.webp" class="img-fluid">
+            </div>
+            <div class="card-body">
+                <p class=""><span class="label">Name:</span>{{name}}</p>
+                <p class=""><span class="label">Best Feature:</span>{{cause}}</p>
+                <p class=""><span class="label">Maximum Size:</span>{{number}}</p>
+            </div>
+            <a href="/members" >View members</a>
+            <a href="/members/new" >Add member</a>
+        </div>
+    </div>
+{{/each}}
+    </div>
+{{else}}
+        <p> Ohh no! There no teams! Please add a team</p>
+        <a href="/teams/new" class="otherbuttons">Add a team</a>
+    </div>
+{{/if}}
+{{/partial}}
+
+{{> layout.hbs}}
