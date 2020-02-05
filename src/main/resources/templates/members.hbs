@@ -1,0 +1,36 @@
+{{#partial "content"}}
+    <div class="pages">
+        <h2 class="text-center">Team Members</h2>
+        {{#if members }}
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Team</th>
+                        <th>Advantage</th>
+                        <th>Weakness</th>
+                    </tr>
+                    </thead>
+                {{#each members }}
+                    <tbody>
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ age }}</td>
+                        <td>{{team}}</td>
+                        <td>{{ power }}</td>
+                        <td>{{ weakness }}</td>
+                    </tr>
+                    </tbody>
+                {{/each}}
+                </table>
+            </div>
+             {{else}}
+            <p>No member exists! Please add the team members</p>
+            <a href="/members/new" class="otherbuttons">Add member</a>
+    </div>
+{{/if}}
+{{/partial}}
+{{> layout.hbs}}
+
