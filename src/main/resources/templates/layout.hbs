@@ -2,30 +2,54 @@
 <html>
 <head>
     <title>F1 TEAMS</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="/css/home.css">
+    <link rel="stylesheet" type="text/css"  href="/css/form.css">
+    <link rel="stylesheet" type="text/css"  href="/css/table.css">
 </head>
 <body>
-<div class="navbar">
-    <div class="navhead">
-        <img class="img" src="./images/logo.png" alt="logo">
-    </div>
-    <div class="navbody">
-        <ul class="nav nav-tabs">
-            <li role="presentation"><a class="active">Home</a></li>
-            <li role="presentation"><a class="a" href="/teams">F1 Teams </a></li>
-            <li role="presentation"><a class="a" href="/teams/add">Add Teams</a></li>
-        </ul>
-    </div>
-</div>
 <div class="container-fluid">
-    <!--begin main template-->
+    <div class="welcome">
+        <div class="navbar">
+            <div class="navhead">
+                <img class="img" src="/images/f1logo2.png" alt="logo">
+            </div>
+            <div class="navbody">
+                <ul>
+                    <li><a class="a" href="/">Home</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">F1 Teams <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dplinks" href="/teams"  style="color:white;">View Teams</a></li>
+                            <li><a class="dplinks" href="/teams/new"  style="color:white;">Add Teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Team Members<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li ><a class="dplinks" href="/members"  style="color:white;">View Members</a></li>
+                            <li ><a class="dplinks" href="/members/new"  style="color:white;">Add Members</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     <div class="col-md-12">
         {{#block "content"}}
         {{/block}}
-
     </div>
 </div>
-<!--end main template-->
-
+</div>>
+{{#block "footer"}}
+    <footer class="footer">
+    </footer>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      $('ul.nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+              }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+    </script>
     </html>
+{{/block}}
