@@ -20,8 +20,6 @@ public class App {
 
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-    public static void main(String[] args) {
-        staticFileLocation("/public");
         Map<String, Object> model = new HashMap<String, Object>();
 
         post("/",(req,res)->{
