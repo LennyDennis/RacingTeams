@@ -1,8 +1,5 @@
 package models;
 
-import org.eclipse.jetty.server.PushBuilder;
-
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,5 +77,17 @@ public class Teams {
 
     public void removeMember(Members member){
         mMembers.remove(member);
+    }
+
+    public static boolean memberExistsInATeam(Members newMember) {
+        boolean exists = false;
+        for(Teams team: instances){
+            for(Members member: team.getMembers()){
+                if (member.getName().equals(newMember.getName())) {
+                    exists = true;
+                }
+            }
+        }
+        return exists;
     }
 }

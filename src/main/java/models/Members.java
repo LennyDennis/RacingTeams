@@ -8,14 +8,16 @@ public class Members {
     private int mAge;
     private String mPower;
     private String mWeakness;
+    private String mTeam;
     private static List<Members> instances = new ArrayList<Members>();
     private int mId;
 
-    public Members(String name, int age, String power, String weakness) {
+    public Members(String name, int age, String power, String weakness,String team) {
         this.mName = name;
         this.mAge = age;
         this.mPower = power;
         this.mWeakness = weakness;
+        this.mTeam = team;
         instances.add(this);
         mId = instances.size();
     }
@@ -50,6 +52,10 @@ public class Members {
 
     public void setName(String name) {
         this.mName = name;
+    }
+
+    public String getTeam(){
+        return mTeam;
     }
 
     public static List<Members> all(){
