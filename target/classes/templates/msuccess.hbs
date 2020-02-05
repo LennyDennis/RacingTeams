@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    {{#if existAlert}}
+        <div class="pages">
+            <h2 class="text-center">Racing Teams Members</h2>
+            <h3>Failed!!!</h3>
+            <p>The member already exists!!!</p>
+            <a href="/members/new" class="otherbuttons">Go back</a>
+        </div>
+    {{else if sizeAlert}}
+        <div class="pages">
+            <h2 class="text-center">Racing Teams Members</h2>
+            <h3>Failed!!!</h3>
+            <p>The team cannot accomodate more members!!!</p>
+            <a href="/members/new" class="otherbuttons">Go back</a>
+        </div>
+    {{else}}
+        <div class="pages">
+            <h2 class="text-center">Racing Teams Members</h2>
+            <p>The member has been successfully added!!!</p>
+            <a href="/members" class="otherbuttons">View Members</a>
+        </div>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}x

@@ -63,9 +63,6 @@ public class Teams {
     public static void clearTeams(){
         instances.clear();
     }
-    public void deleteTeam(){
-        instances.remove(mId-1);
-    }
 
     public List<Members> getMembers() {
         return mMembers;

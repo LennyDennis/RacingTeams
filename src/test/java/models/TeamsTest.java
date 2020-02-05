@@ -46,12 +46,4 @@ public class TeamsTest {
         Teams.clearTeams();
         assertEquals(0,Teams.all().size());
     }
-    @Test
-    public void Teams_deleteASpecificTeam(){
-        Teams team1 = new Teams("Mercedes","Engine Power",10);
-        Teams team2 = new Teams("Mercedes","Engine Power",10);
-        team2.deleteTeam();
-        assertEquals(1,Teams.all().size());
-        assertEquals(Teams.all().get(0).getId(),2);
-    }
 }
