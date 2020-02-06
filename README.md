@@ -1,6 +1,6 @@
 # F1 RACING TEAMS
 
-[F1 Racing Teaams](https://github.com/LennyDennis/RacingTeams) is a web application that allows one create a racing team and also add members to the specific team
+[F1 Racing Teams](https://github.com/LennyDennis/RacingTeams) is a web application that allows one create a racing team and also add members to the specific team
 
 # Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
