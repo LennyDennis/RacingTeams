@@ -4,6 +4,8 @@ plugins {
     id 'application'
 }
 
+applicationName = "Racing-Teams"
+
 group 'com.lennydennis.RacingTeams'
 version '1.0-SNAPSHOT'
 
@@ -26,5 +28,5 @@ dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21'
 }
 
-defaulTasks = ['clean']
-teask stage(dependsOn: ['clean','installApp'])
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installApp'])
