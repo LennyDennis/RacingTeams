@@ -1,0 +1,41 @@
+
+{{#partial "content"}}
+    <div class="section">
+        <div class="form-left">
+            <h2>Team Members</h2>
+            <div class="icon">
+                <img  src="/images/driver.jpeg" alt="image">
+            </div>
+        </div>
+        <div class="form-right">
+            <h3>Add a new member</h3>
+            <form action="/members/new" method="post" name="memberForm" class="form">
+                <input name="teamId" type="hidden" value="{{id}}">
+                <input class="form-control input" type="text" placeholder="Enter Name..." name="memberName" autocomplete="off">
+                <input class="form-control input" type="number" name="memberAge" placeholder="Enter Age..."  />
+                <select class="form-control input" name="memberAdv" >
+                    <option label="" hidden disabled selected value>Choose Advantage...</option>
+                    <option value="Height">Skilled</option>
+                    <option value="Height">Height</option>
+                    <option value="Weight">Weight</option>
+                    <option value="Experienced">Experienced</option>
+                    <option value="Fast">Fast</option>
+                    <option value="Smart">Smart</option>
+                    <option value="Consistency">Consistency</option>
+                </select>
+                <select class="form-control input " name="memberWeakness" >
+                    <option label="" hidden disabled selected value>Choose Weakness...</option>
+                    <option value="Height">Height</option>
+                    <option value="Weight">Weight</option>
+                    <option value="Inexperienced">Inexperienced</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Laziness">Laziness</option>
+                    <option value="Inconsistency">Inconsistency</option>
+                </select>
+                <button type="submit" class="button">Add Member</button>
+            </form>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

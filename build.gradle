@@ -25,3 +25,6 @@ dependencies {
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
     compile 'org.slf4j:slf4j-simple:1.7.21'
 }
+
+defaulTasks = ['clean']
+teask stage(dependsOn: ['clean','installApp'])

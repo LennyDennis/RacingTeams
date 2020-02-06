@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="models.TeamsTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="models.TeamsTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/lenny/.sdkman/candidates/java/8.0.242.hs-adpt/jre/lib/amd64"/>
@@ -62,10 +62,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="models.TeamsTest" name="Teams_getTheCause_EnginePower" time="0.007"/>
+  <testcase classname="models.TeamsTest" name="Teams_getTheCause_EnginePower" time="0.006"/>
   <testcase classname="models.TeamsTest" name="Teams_getTheName_Mercedes" time="0"/>
   <testcase classname="models.TeamsTest" name="Teams_deleteAllTheTeams_0" time="0"/>
   <testcase classname="models.TeamsTest" name="Teams_getAllTeamInstances_instances" time="0"/>
   <testcase classname="models.TeamsTest" name="Teams_getTheNumber_10" time="0"/>
+  <testcase classname="models.TeamsTest" name="Existence_memberExist_tru" time="0"/>
   <testcase classname="models.TeamsTest" name="Teams_getTheTeamId_1" time="0"/>
 </testsuite>
