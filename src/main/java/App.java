@@ -35,6 +35,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         get("/teams/new",(req,res) ->{
+            model.put("username", req.session().attribute("username"));
             return new ModelAndView(model, "team-form.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -47,11 +48,13 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         get("/teams",(req,res)-> {
+            model.put("username", req.session().attribute("username"));
             model.put("teams",Teams.all());
             return new ModelAndView(model, "teams.hbs");
         },new HandlebarsTemplateEngine());
 
         get("/members/new",(req,res) ->{
+            model.put("username", req.session().attribute("username"));
             return new ModelAndView(model, "members-form.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -76,6 +79,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         get("/members",(req,res)-> {
+            model.put("username", req.session().attribute("username"));
             model.put("members",Members.all());
             return new ModelAndView(model, "members.hbs");
         },new HandlebarsTemplateEngine());

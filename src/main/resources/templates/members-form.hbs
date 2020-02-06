@@ -30,11 +30,11 @@
                     <option value="Laziness">Laziness</option>
                     <option value="Inconsistency">Inconsistency</option>
                 </select>
-                <select class="form-control input" name="teamId" >
+                <select class="form-control input" name="memberTeam" >
                     {{#if teams}}
                         <option label="" hidden disabled selected value>Choose Teams...</option>
                         {{#each teams }}
-                            <option value="{{value}}">{{name}}</option>
+                            <option value="{{name}}">{{name}}</option>
                         {{/each}}
                     {{else}}
                         <option label="" hidden disabled selected value>No Teams Added..</option>
