@@ -22,6 +22,9 @@ HTML
 CSS
 Jquery
 
+# Codebeat Badge
+[![codebeat badge](https://codebeat.co/badges/fc2e0d4f-a6a4-41e4-8a73-3cb5f9374505)](https://codebeat.co/projects/github-com-lennydennis-racingteams-feature-backend-logic)
+
 # Behaviour Driven Development
 Prompts the user to enter a user name to be used to determine a session.
 
