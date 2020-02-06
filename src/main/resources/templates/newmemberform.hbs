@@ -1,3 +1,4 @@
+
 {{#partial "content"}}
     <div class="section">
         <div class="form-left">
@@ -9,6 +10,7 @@
         <div class="form-right">
             <h3>Add a new member</h3>
             <form action="/members/new" method="post" name="memberForm" class="form">
+                <input name="teamId" type="hidden" value="{{id}}">
                 <input class="form-control input" type="text" placeholder="Enter Name..." name="memberName" autocomplete="off">
                 <input class="form-control input" type="number" name="memberAge" placeholder="Enter Age..."  />
                 <select class="form-control input" name="memberAdv" >
@@ -29,16 +31,6 @@
                     <option value="Slow">Slow</option>
                     <option value="Laziness">Laziness</option>
                     <option value="Inconsistency">Inconsistency</option>
-                </select>
-                <select class="form-control input" name="teamId" >
-                    {{#if teams}}
-                        <option label="" hidden disabled selected value>Choose Teams...</option>
-                        {{#each teams }}
-                            <option value="{{value}}">{{name}}</option>
-                        {{/each}}
-                    {{else}}
-                        <option label="" hidden disabled selected value>No Teams Added..</option>
-                    {{/if}}
                 </select>
                 <button type="submit" class="button">Add Member</button>
             </form>

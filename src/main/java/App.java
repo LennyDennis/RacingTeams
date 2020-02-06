@@ -56,6 +56,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         post("/members/new",(req,res)->{
+//            Teams theTeam = Teams.find(Integer.parseInt(req.queryParams("teamId")));
             String name = req.queryParams("memberName");
             int age = Integer.parseInt(req.queryParams("memberAge"));
             String memberAdv = req.queryParams("memberAdv");
@@ -63,13 +64,13 @@ public class App {
             String memberTeam = req.queryParams("memberTeam");
             Members member = new Members(name,age,memberAdv,weakness,memberTeam);
 //            if (Teams.memberExistsInATeam(member)) {
-//                String existAlert = name + "is already in a team";
+//                String existAlert = "This member isnin a team";
 //                model.put("alert", existAlert);
 //            }else if (theTeam.getMembers().size() >= theTeam.getNumber()) {
 //                String sizeAlert = "Team is already full!!!!";
 //                model.put("sizeMet", sizeAlert);
 //            }else{
-//                Teams.addMember(member);
+//                theTeam.addMember(member);
 //            }
             return  new ModelAndView(model, "msuccess.hbs");
         }, new HandlebarsTemplateEngine());

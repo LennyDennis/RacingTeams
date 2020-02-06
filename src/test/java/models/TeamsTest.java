@@ -46,4 +46,9 @@ public class TeamsTest {
         Teams.clearTeams();
         assertEquals(0,Teams.all().size());
     }
+    @Test
+    public void Existence_memberExist_tru(){
+        Teams team = new Teams("Mercedes","Engine Power",10);
+
+    }
 }

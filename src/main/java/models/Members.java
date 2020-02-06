@@ -16,8 +16,8 @@ public class Members {
         this.mName = name;
         this.mAge = age;
         this.mPower = power;
-        this.mWeakness = weakness;
         this.mTeam = team;
+        this.mWeakness = weakness;
         instances.add(this);
         mId = instances.size();
     }

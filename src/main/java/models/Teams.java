@@ -63,6 +63,9 @@ public class Teams {
     public static void clearTeams(){
         instances.clear();
     }
+    public void deleteTeam(){
+        instances.remove(mId-1);
+    }
 
     public List<Members> getMembers() {
         return mMembers;
@@ -70,21 +73,5 @@ public class Teams {
 
     public void addMember(Members member){
         mMembers.add(member);
-    }
-
-    public void removeMember(Members member){
-        mMembers.remove(member);
-    }
-
-    public static boolean memberExistsInATeam(Members newMember) {
-        boolean exists = false;
-        for(Teams team: instances){
-            for(Members member: team.getMembers()){
-                if (member.getName().equals(newMember.getName())) {
-                    exists = true;
-                }
-            }
-        }
-        return exists;
     }
 }
